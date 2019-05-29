@@ -173,7 +173,7 @@ enum {
     ({                                                              \
         ptr_t _off = store->offset;                                 \
         if (store->offset + (size) > store->bound) {                \
-            int new_bound = store->bound * 2;                       \
+            ptr_t new_bound = store->bound * 2;                     \
                                                                     \
             while (store->offset + (size) > new_bound)              \
                 new_bound *= 2;                                     \
